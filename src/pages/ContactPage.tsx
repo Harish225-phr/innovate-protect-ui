@@ -35,8 +35,8 @@ const ContactPage = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
                   <p className="text-muted-foreground mb-2">For general inquiries</p>
-                  <a href="mailto:contact@nexusip.com" className="text-primary hover:underline">
-                    contact@nexusip.com
+                  <a href="mailto:contact@contriveinsight.com" className="text-primary hover:underline">
+                    contact@contriveinsight.com
                   </a>
                 </div>
 

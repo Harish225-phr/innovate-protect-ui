@@ -31,7 +31,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Email</div>
-                    <div className="text-foreground font-medium">contact@nexusip.com</div>
+                    <div className="text-foreground font-medium">contact@contriveinsight.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -101,14 +101,14 @@ const Footer = () => {
             <div className="flex items-center gap-6">
               <Link to="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">IP</span>
+                  <span className="text-primary-foreground font-bold text-lg">CI</span>
                 </div>
                 <span className="text-xl font-bold text-foreground">
-                  Nexus<span className="text-primary">IP</span>
+                  Contrive<span className="text-primary">Insight</span>
                 </span>
               </Link>
               <span className="text-muted-foreground text-sm">
-                © 2025 NexusIP. All rights reserved.
+                © 2025 ContriveInsight. All rights reserved.
               </span>
             </div>
 

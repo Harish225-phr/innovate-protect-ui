@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "NexusIP transformed how we approach intellectual property. Their strategic guidance helped us build a patent portfolio that was instrumental in our Series B funding.",
+    quote: "ContriveInsight transformed how we approach intellectual property. Their strategic guidance helped us build a patent portfolio that was instrumental in our Series B funding.",
     author: "Sarah Chen",
     role: "CEO, NeuroTech Labs",
     image: "SC",
@@ -15,7 +15,7 @@ const testimonials = [
     image: "MR",
   },
   {
-    quote: "From our first patent filing to managing our global IP portfolio, NexusIP has been an invaluable partner. Their strategic insights have saved us millions in potential litigation.",
+    quote: "From our first patent filing to managing our global IP portfolio, ContriveInsight has been an invaluable partner. Their strategic insights have saved us millions in potential litigation.",
     author: "James Morrison",
     role: "VP Legal, Quantum Systems",
     image: "JM",

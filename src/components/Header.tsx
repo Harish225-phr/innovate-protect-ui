@@ -39,10 +39,10 @@ const Header = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">IP</span>
+            <span className="text-primary-foreground font-bold text-lg">CI</span>
           </div>
           <span className="text-xl font-bold text-foreground hidden sm:block">
-            Nexus<span className="text-primary">IP</span>
+            Contrive<span className="text-primary">Insight</span>
           </span>
         </Link>
 
