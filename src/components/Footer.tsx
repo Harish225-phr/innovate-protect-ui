@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -5,7 +6,7 @@ import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react
 
 const Footer = () => {
   return (
-    <footer id="contact" className="relative overflow-hidden">
+    <footer className="relative overflow-hidden">
       {/* Contact Section */}
       <section className="section-padding bg-secondary/30">
         <div className="container mx-auto px-6">
@@ -98,14 +99,14 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             {/* Logo & Copyright */}
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-2">
+              <Link to="/" className="flex items-center gap-2">
                 <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
                   <span className="text-primary-foreground font-bold text-lg">IP</span>
                 </div>
                 <span className="text-xl font-bold text-foreground">
                   Nexus<span className="text-primary">IP</span>
                 </span>
-              </div>
+              </Link>
               <span className="text-muted-foreground text-sm">
                 © 2025 NexusIP. All rights reserved.
               </span>
@@ -113,15 +114,15 @@ const Footer = () => {
 
             {/* Links */}
             <nav className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Careers
-              </a>
+              <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                Services
+              </Link>
+              <Link to="/process" className="text-muted-foreground hover:text-primary transition-colors">
+                Process
+              </Link>
+              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                Contact
+              </Link>
             </nav>
 
             {/* Social Links */}
