@@ -1,0 +1,149 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
+
+const Footer = () => {
+  return (
+    <footer id="contact" className="relative overflow-hidden">
+      {/* Contact Section */}
+      <section className="section-padding bg-secondary/30">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Left Side - Info */}
+            <div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
+                Get In Touch
+              </span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+                Ready to Protect Your Innovation?
+              </h2>
+              <p className="text-muted-foreground text-lg mb-8 max-w-md">
+                Schedule a free consultation with our patent experts and discover how we can safeguard your intellectual property.
+              </p>
+
+              {/* Contact Info */}
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Email</div>
+                    <div className="text-foreground font-medium">contact@nexusip.com</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Phone</div>
+                    <div className="text-foreground font-medium">+1 (555) 123-4567</div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Location</div>
+                    <div className="text-foreground font-medium">San Francisco, CA</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Side - Form */}
+            <div className="glass-card rounded-2xl p-8">
+              <h3 className="text-xl font-semibold text-foreground mb-6">Send us a message</h3>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <Input
+                    placeholder="First Name"
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                  <Input
+                    placeholder="Last Name"
+                    className="bg-secondary/50 border-border focus:border-primary"
+                  />
+                </div>
+                <Input
+                  type="email"
+                  placeholder="Email Address"
+                  className="bg-secondary/50 border-border focus:border-primary"
+                />
+                <Input
+                  placeholder="Company Name"
+                  className="bg-secondary/50 border-border focus:border-primary"
+                />
+                <Textarea
+                  placeholder="Tell us about your invention or IP needs..."
+                  rows={4}
+                  className="bg-secondary/50 border-border focus:border-primary resize-none"
+                />
+                <Button variant="hero" className="w-full group">
+                  Send Message
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bottom Footer */}
+      <div className="border-t border-border">
+        <div className="container mx-auto px-6 py-8">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            {/* Logo & Copyright */}
+            <div className="flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-lg">IP</span>
+                </div>
+                <span className="text-xl font-bold text-foreground">
+                  Nexus<span className="text-primary">IP</span>
+                </span>
+              </div>
+              <span className="text-muted-foreground text-sm">
+                © 2025 NexusIP. All rights reserved.
+              </span>
+            </div>
+
+            {/* Links */}
+            <nav className="flex items-center gap-6 text-sm">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                Careers
+              </a>
+            </nav>
+
+            {/* Social Links */}
+            <div className="flex items-center gap-3">
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                <Linkedin className="w-4 h-4" />
+              </a>
+              <a
+                href="#"
+                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
+              >
+                <Twitter className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
