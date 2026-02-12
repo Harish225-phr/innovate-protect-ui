@@ -35,8 +35,11 @@ const ContactPage = () => {
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
                   <p className="text-muted-foreground mb-2">We're here to help</p>
-                  <a href="tel:+917015189070" className="text-primary hover:underline">
+                  <a href="tel:+917015189070" className="text-primary hover:underline block">
                     +91 70151 89070
+                  </a>
+                  <a href="tel:+918295348595" className="text-primary hover:underline block mt-1">
+                    +91 82953 48595
                   </a>
                 </div>
 
