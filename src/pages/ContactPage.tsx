@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, ArrowRight, Clock, Calendar } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Calendar } from "lucide-react";
 
 const ContactPage = () => {
   return (
@@ -31,23 +31,26 @@ const ContactPage = () => {
               <div className="lg:col-span-1 space-y-6">
                 <div className="glass-card rounded-2xl p-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Mail className="w-6 h-6 text-primary" />
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
-                  <p className="text-muted-foreground mb-2">For general inquiries</p>
-                  <a href="mailto:contact@contriveinsight.com" className="text-primary hover:underline">
-                    contact@contriveinsight.com
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
+                  <p className="text-muted-foreground mb-2">We're here to help</p>
+                  <a href="tel:+917015189070" className="text-primary hover:underline">
+                    +91 70151 89070
                   </a>
                 </div>
 
                 <div className="glass-card rounded-2xl p-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Phone className="w-6 h-6 text-primary" />
+                    <Mail className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
-                  <p className="text-muted-foreground mb-2">Mon-Fri, 9am-6pm PST</p>
-                  <a href="tel:+15551234567" className="text-primary hover:underline">
-                    +1 (555) 123-4567
+                  <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
+                  <p className="text-muted-foreground mb-2">For inquiries</p>
+                  <a href="mailto:nihal@contriveinsight.com" className="text-primary hover:underline block">
+                    nihal@contriveinsight.com
+                  </a>
+                  <a href="mailto:info@contriveinsight.com" className="text-primary hover:underline block mt-1">
+                    info@contriveinsight.com
                   </a>
                 </div>
 
@@ -56,23 +59,8 @@ const ContactPage = () => {
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground mb-2">Visit Us</h3>
-                  <p className="text-muted-foreground mb-2">Our headquarters</p>
-                  <p className="text-foreground">
-                    123 Innovation Drive<br />
-                    San Francisco, CA 94105
-                  </p>
-                </div>
-
-                <div className="glass-card rounded-2xl p-6">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                    <Clock className="w-6 h-6 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Office Hours</h3>
-                  <p className="text-muted-foreground">
-                    Monday - Friday: 9:00 AM - 6:00 PM<br />
-                    Saturday: 10:00 AM - 2:00 PM<br />
-                    Sunday: Closed
-                  </p>
+                  <p className="text-muted-foreground mb-2">Our office</p>
+                  <p className="text-foreground">Delhi, India</p>
                 </div>
               </div>
 
@@ -91,45 +79,23 @@ const ContactPage = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">First Name</label>
-                        <Input
-                          placeholder="John"
-                          className="bg-secondary/50 border-border focus:border-primary h-12"
-                        />
+                        <Input placeholder="John" className="bg-secondary/50 border-border focus:border-primary h-12" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">Last Name</label>
-                        <Input
-                          placeholder="Doe"
-                          className="bg-secondary/50 border-border focus:border-primary h-12"
-                        />
+                        <Input placeholder="Doe" className="bg-secondary/50 border-border focus:border-primary h-12" />
                       </div>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">Email Address</label>
-                        <Input
-                          type="email"
-                          placeholder="john@company.com"
-                          className="bg-secondary/50 border-border focus:border-primary h-12"
-                        />
+                        <Input type="email" placeholder="john@company.com" className="bg-secondary/50 border-border focus:border-primary h-12" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">Phone Number</label>
-                        <Input
-                          type="tel"
-                          placeholder="+1 (555) 000-0000"
-                          className="bg-secondary/50 border-border focus:border-primary h-12"
-                        />
+                        <Input type="tel" placeholder="+91 00000 00000" className="bg-secondary/50 border-border focus:border-primary h-12" />
                       </div>
-                    </div>
-                    
-                    <div>
-                      <label className="block text-sm font-medium text-foreground mb-2">Company Name</label>
-                      <Input
-                        placeholder="Your Company Inc."
-                        className="bg-secondary/50 border-border focus:border-primary h-12"
-                      />
                     </div>
                     
                     <div>
@@ -146,11 +112,7 @@ const ContactPage = () => {
                     
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">Tell Us About Your Project</label>
-                      <Textarea
-                        placeholder="Describe your invention or IP needs..."
-                        rows={5}
-                        className="bg-secondary/50 border-border focus:border-primary resize-none"
-                      />
+                      <Textarea placeholder="Describe your invention or IP needs..." rows={5} className="bg-secondary/50 border-border focus:border-primary resize-none" />
                     </div>
                     
                     <Button variant="hero" size="xl" className="w-full group">
