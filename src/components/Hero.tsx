@@ -21,11 +21,6 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Logo */}
-          <div className="flex justify-center mb-8 animate-fade-in">
-            <img src={logo} alt="ContriveInsight Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
-          </div>
-
           {/* Main Headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight mb-4 animate-fade-in-up">
             Protect Your{" "}
