@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import heroBg from "@/assets/hero-bg.jpg";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
@@ -20,28 +21,25 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 pt-24 pb-16">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full mb-8 animate-fade-in">
-            <Shield className="w-4 h-4 text-primary" />
-            <span className="text-sm text-muted-foreground">Trusted by 500+ Innovators Worldwide</span>
+          {/* Logo */}
+          <div className="flex justify-center mb-8 animate-fade-in">
+            <img src={logo} alt="ContriveInsight Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in-up">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight mb-4 animate-fade-in-up">
             Protect Your{" "}
-            <span className="gradient-text">Innovations</span>
-            <br />
-            with World-Class{" "}
+            <span className="gradient-text">Idea</span>
+            {" "}with{" "}
             <span className="relative inline-block">
-              Patent Strategy
+              Contrive Insight
               <Sparkles className="absolute -top-2 -right-6 w-6 h-6 text-primary animate-pulse" />
             </span>
           </h1>
 
-          {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-fade-in-up animation-delay-200">
-            We transform groundbreaking ideas into bulletproof intellectual property.
-            Expert patent filing, strategic portfolio management, and global IP protection.
+          {/* Subtitle */}
+          <p className="text-xl md:text-2xl lg:text-3xl font-light text-muted-foreground mb-10 animate-fade-in-up animation-delay-200 italic tracking-wide">
+            Transforming Ideas Into Success
           </p>
 
           {/* CTA Buttons */}

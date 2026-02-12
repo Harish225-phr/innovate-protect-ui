@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -27,20 +28,22 @@ const Footer = () => {
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Email</div>
-                    <div className="text-foreground font-medium">contact@contriveinsight.com</div>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Phone</div>
-                    <div className="text-foreground font-medium">+1 (555) 123-4567</div>
+                    <a href="tel:+917015189070" className="text-foreground font-medium hover:text-primary transition-colors">+91 70151 89070</a>
+                  </div>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">Email</div>
+                    <a href="mailto:nihal@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">nihal@contriveinsight.com</a>
+                    <br />
+                    <a href="mailto:info@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">info@contriveinsight.com</a>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -49,7 +52,7 @@ const Footer = () => {
                   </div>
                   <div>
                     <div className="text-sm text-muted-foreground">Location</div>
-                    <div className="text-foreground font-medium">San Francisco, CA</div>
+                    <div className="text-foreground font-medium">Delhi, India</div>
                   </div>
                 </div>
               </div>
@@ -100,9 +103,7 @@ const Footer = () => {
             {/* Logo & Copyright */}
             <div className="flex items-center gap-6">
               <Link to="/" className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">CI</span>
-                </div>
+                <img src={logo} alt="ContriveInsight" className="w-10 h-10 object-contain" />
                 <span className="text-xl font-bold text-foreground">
                   Contrive<span className="text-primary">Insight</span>
                 </span>

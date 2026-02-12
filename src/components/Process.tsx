@@ -1,29 +1,29 @@
-import { Search, FileCheck, Send, Handshake } from "lucide-react";
+import { Lightbulb, Search, Send, FolderOpen } from "lucide-react";
 
 const steps = [
   {
     step: "01",
-    icon: Search,
-    title: "Discovery",
-    description: "We conduct a thorough analysis of your invention and market landscape to identify patentable elements.",
+    icon: Lightbulb,
+    title: "Idea Evaluation",
+    description: "We assess your invention's uniqueness and identify its patentable elements for maximum protection.",
   },
   {
     step: "02",
-    icon: FileCheck,
-    title: "Strategy & Drafting",
-    description: "Our experts craft comprehensive patent claims and applications tailored to maximize your protection.",
+    icon: Search,
+    title: "Patent Search & Drafting",
+    description: "Comprehensive prior art search followed by expert drafting of claims and patent applications.",
   },
   {
     step: "03",
     icon: Send,
     title: "Filing & Prosecution",
-    description: "We file your applications and manage all USPTO communications and office action responses.",
+    description: "We file your applications and manage all office action responses and communications.",
   },
   {
     step: "04",
-    icon: Handshake,
-    title: "Grant & Protection",
-    description: "Receive your granted patent and ongoing support for enforcement, licensing, and portfolio growth.",
+    icon: FolderOpen,
+    title: "Protection & Portfolio Management",
+    description: "Ongoing support for enforcement, licensing, renewals, and strategic portfolio growth.",
   },
 ];
 
@@ -40,7 +40,7 @@ const Process = () => {
             How It Works
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Your Path to Patent Protection
+            Our Core Process
           </h2>
           <p className="text-muted-foreground text-lg">
             A streamlined process designed to protect your innovations efficiently and effectively.
