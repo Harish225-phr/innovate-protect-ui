@@ -30,22 +30,19 @@ const Footer = () => {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Phone</div>
-                    <a href="tel:+917015189070" className="text-foreground font-medium hover:text-primary transition-colors block">+91 70151 89070</a>
-                    <a href="tel:+918295348595" className="text-foreground font-medium hover:text-primary transition-colors block">+91 82953 48595</a>
-                  </div>
+                   <div>
+                     <div className="text-sm text-muted-foreground">Phone</div>
+                     <a href="tel:+918295348595" className="text-foreground font-medium hover:text-primary transition-colors">+91 82953 48595</a>
+                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-primary" />
                   </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Email</div>
-                    <a href="mailto:nihal@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">nihal@contriveinsight.com</a>
-                    <br />
-                    <a href="mailto:info@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">info@contriveinsight.com</a>
-                  </div>
+                   <div>
+                     <div className="text-sm text-muted-foreground">Email</div>
+                     <a href="mailto:info@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">info@contriveinsight.com</a>
+                   </div>
                 </div>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">

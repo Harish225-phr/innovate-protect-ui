@@ -33,28 +33,22 @@ const ContactPage = () => {
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
-                  <p className="text-muted-foreground mb-2">We're here to help</p>
-                  <a href="tel:+917015189070" className="text-primary hover:underline block">
-                    +91 70151 89070
-                  </a>
-                  <a href="tel:+918295348595" className="text-primary hover:underline block mt-1">
-                    +91 82953 48595
-                  </a>
+                   <h3 className="text-lg font-semibold text-foreground mb-2">Call Us</h3>
+                   <p className="text-muted-foreground mb-2">We're here to help</p>
+                   <a href="tel:+918295348595" className="text-primary hover:underline block">
+                     +91 82953 48595
+                   </a>
                 </div>
 
                 <div className="glass-card rounded-2xl p-6">
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
-                  <p className="text-muted-foreground mb-2">For inquiries</p>
-                  <a href="mailto:nihal@contriveinsight.com" className="text-primary hover:underline block">
-                    nihal@contriveinsight.com
-                  </a>
-                  <a href="mailto:info@contriveinsight.com" className="text-primary hover:underline block mt-1">
-                    info@contriveinsight.com
-                  </a>
+                   <h3 className="text-lg font-semibold text-foreground mb-2">Email Us</h3>
+                   <p className="text-muted-foreground mb-2">For inquiries</p>
+                   <a href="mailto:info@contriveinsight.com" className="text-primary hover:underline block">
+                     info@contriveinsight.com
+                   </a>
                 </div>
 
                 <div className="glass-card rounded-2xl p-6">
