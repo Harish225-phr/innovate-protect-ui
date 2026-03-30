@@ -144,7 +144,7 @@ const Footer = () => {
           <div className="mt-6 pt-4 border-t border-border/60 text-center text-sm text-muted-foreground">
             Powered by{" "}
             <a
-              href="https://tech-himtech.netlify.app/"
+              href="https://www.techhim.online/"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-foreground hover:text-primary transition-colors"
