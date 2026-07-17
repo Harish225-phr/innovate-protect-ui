@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Radio, Film, BarChart3, DollarSign, Smartphone, Tv, CreditCard, Globe } from "lucide-react";
+import { Radio, Film, ChartBar as BarChart3, DollarSign, Smartphone, Tv, CreditCard, Globe } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
 
 const BLOCKS = [

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Brain, Workflow, Bot, LineChart, Zap, Cpu } from "lucide-react";
+import { Brain, Workflow, Bot, ChartLine as LineChart, Zap, Cpu } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
 
 const CARDS = [

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Search, FileSearch, Ban, Flag, Shield, AlertTriangle, Scale } from "lucide-react";
+import { Search, FileSearch, Ban, Flag, Shield, TriangleAlert as AlertTriangle, Scale } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
 
 const SERVICES_IP = [

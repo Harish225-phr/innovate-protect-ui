@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Monitor, Smartphone, Building2, LayoutGrid, Boxes, Users, BarChart3 } from "lucide-react";
+import { Monitor, Smartphone, Building2, LayoutGrid, Boxes, Users, ChartBar as BarChart3 } from "lucide-react";
 import { SectionHeading } from "../SectionHeading";
 
 const CAPABILITIES = [
