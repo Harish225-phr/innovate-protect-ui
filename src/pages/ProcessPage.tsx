@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Process from "@/components/Process";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { Process } from "@/components/Process";
 
 const ProcessPage = () => {
   return (

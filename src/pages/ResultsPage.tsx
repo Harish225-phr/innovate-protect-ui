@@ -1,6 +1,6 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import CaseStudies from "@/components/CaseStudies";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+import { CaseStudies } from "@/components/CaseStudies";
 
 const ResultsPage = () => {
   return (

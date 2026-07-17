@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import WhyChooseUs from "@/components/WhyChooseUs";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { WhyChooseUs } from "@/components/WhyChooseUs";
 import Services from "@/components/Services";
-import Process from "@/components/Process";
-import CaseStudies from "@/components/CaseStudies";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
+import { Process } from "@/components/Process";
+import { CaseStudies } from "@/components/CaseStudies";
+import { Testimonials } from "@/components/Testimonials";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
