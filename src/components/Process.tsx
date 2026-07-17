@@ -1,96 +1,56 @@
-import { Lightbulb, Search, Send, FolderOpen } from "lucide-react";
+import { motion } from "framer-motion";
+import { PROCESS_STEPS } from "../data/content";
+import { SectionHeading } from "./SectionHeading";
 
-const steps = [
-  {
-    step: "01",
-    icon: Lightbulb,
-    title: "Idea Evaluation",
-    description: "We assess your invention's uniqueness and identify its patentable elements for maximum protection.",
-  },
-  {
-    step: "02",
-    icon: Search,
-    title: "Patent Search & Drafting",
-    description: "Comprehensive prior art search followed by expert drafting of claims and patent applications.",
-  },
-  {
-    step: "03",
-    icon: Send,
-    title: "Filing & Prosecution",
-    description: "We file your applications and manage all office action responses and communications.",
-  },
-  {
-    step: "04",
-    icon: FolderOpen,
-    title: "Protection & Portfolio Management",
-    description: "Ongoing support for enforcement, licensing, renewals, and strategic portfolio growth.",
-  },
-];
-
-const Process = () => {
+export function Process() {
   return (
-    <section id="process" className="section-padding relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[radial-gradient(circle,_hsl(174_72%_40%_/_0.08)_0%,_transparent_60%)]" />
+    <section id="process" className="relative py-24">
+      <div className="container-px">
+        <SectionHeading
+          eyebrow="Our Process"
+          title={<>From idea to launch — <span className="gradient-text">engineered with precision</span></>}
+          subtitle="Seven steps, one continuous loop of craftsmanship. Every step is transparent, demoable and accountable."
+        />
 
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-20">
-          <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-            How It Works
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Our Core Process
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            A streamlined process designed to protect your innovations efficiently and effectively.
-          </p>
-        </div>
+        <div className="relative mt-16">
+          {/* connecting line */}
+          <div className="absolute left-1/2 top-0 hidden h-full w-px -translate-x-1/2 bg-gradient-to-b from-electric-400/0 via-indigo-500/40 to-violet-500/0 lg:block" />
 
-        {/* Timeline */}
-        <div className="relative">
-          {/* Connection Line - Desktop */}
-          <div className="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div
-                key={step.step}
-                className="relative group"
+          <div className="space-y-6 lg:space-y-0">
+            {PROCESS_STEPS.map((step, i) => (
+              <motion.div
+                key={step.name}
+                className={`relative flex flex-col gap-4 lg:flex-row lg:items-center ${i % 2 === 0 ? "" : "lg:flex-row-reverse"}`}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5, delay: i * 0.05 }}
               >
-                {/* Step Number */}
-                <div className="text-7xl font-bold text-primary/10 absolute -top-4 left-0 lg:left-1/2 lg:-translate-x-1/2 group-hover:text-primary/20 transition-colors duration-300">
-                  {step.step}
-                </div>
-
-                {/* Icon Circle */}
-                <div className="relative z-10 w-20 h-20 rounded-full bg-card border-2 border-border flex items-center justify-center mx-auto mb-6 group-hover:border-primary group-hover:shadow-lg group-hover:shadow-primary/20 transition-all duration-300">
-                  <step.icon className="w-8 h-8 text-primary" />
-                </div>
-
-                {/* Content */}
-                <div className="text-center lg:px-2">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-
-                {/* Arrow - Mobile/Tablet */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center my-6">
-                    <div className="w-0.5 h-8 bg-gradient-to-b from-primary/30 to-transparent" />
+                <div className="lg:w-1/2 lg:px-12">
+                  <div className="card-glow p-6">
+                    <div className="flex items-center gap-3">
+                      <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-electric-500 to-indigo-500 font-display text-sm font-bold text-white shadow-glow">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <h3 className="font-display text-lg font-bold text-white">{step.name}</h3>
+                    </div>
+                    <p className="mt-3 text-sm leading-relaxed text-white/60">{step.desc}</p>
                   </div>
-                )}
-              </div>
+                </div>
+                <div className="relative hidden lg:block lg:w-1/2">
+                  <div className="absolute left-1/2 top-1/2 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full bg-electric-400 shadow-glow">
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-electric-400"
+                      animate={{ scale: [1, 2.5], opacity: [0.6, 0] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: i * 0.2 }}
+                    />
+                  </div>
+                </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default Process;
+}

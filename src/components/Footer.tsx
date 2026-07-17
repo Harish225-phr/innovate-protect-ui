@@ -1,161 +1,76 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, Phone, MapPin, ArrowRight, Linkedin, Twitter } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { Linkedin, Twitter, Github, ArrowRight } from "lucide-react";
+import { SERVICES } from "../data/content";
 
-const Footer = () => {
+export function Footer() {
   return (
-    <footer className="relative overflow-hidden">
-      {/* Contact Section */}
-      <section className="section-padding bg-secondary/30">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Left Side - Info */}
-            <div>
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-4 block">
-                Get In Touch
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Ready to Protect Your Innovation?
-              </h2>
-              <p className="text-muted-foreground text-lg mb-8 max-w-md">
-                Schedule a free consultation with our patent experts and discover how we can safeguard your intellectual property.
-              </p>
-
-              {/* Contact Info */}
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Phone className="w-5 h-5 text-primary" />
-                  </div>
-                   <div>
-                     <div className="text-sm text-muted-foreground">Phone</div>
-                     <a href="tel:+918295348595" className="text-foreground font-medium hover:text-primary transition-colors">+91 82953 48595</a>
-                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-primary" />
-                  </div>
-                   <div>
-                     <div className="text-sm text-muted-foreground">Email</div>
-                     <a href="mailto:info@contriveinsight.com" className="text-foreground font-medium hover:text-primary transition-colors">info@contriveinsight.com</a>
-                   </div>
-                </div>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-sm text-muted-foreground">Location</div>
-                    <div className="text-foreground font-medium">Delhi, India</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Side - Form */}
-            <div className="glass-card rounded-2xl p-8">
-              <h3 className="text-xl font-semibold text-foreground mb-6">Send us a message</h3>
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <Input
-                    placeholder="First Name"
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
-                  <Input
-                    placeholder="Last Name"
-                    className="bg-secondary/50 border-border focus:border-primary"
-                  />
-                </div>
-                <Input
-                  type="email"
-                  placeholder="Email Address"
-                  className="bg-secondary/50 border-border focus:border-primary"
-                />
-                <Input
-                  placeholder="Company Name"
-                  className="bg-secondary/50 border-border focus:border-primary"
-                />
-                <Textarea
-                  placeholder="Tell us about your invention or IP needs..."
-                  rows={4}
-                  className="bg-secondary/50 border-border focus:border-primary resize-none"
-                />
-                <Button variant="hero" className="w-full group">
-                  Send Message
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </form>
-            </div>
+    <footer className="relative overflow-hidden border-t border-white/10 bg-ink-950 pt-20 pb-10">
+      <div className="absolute -top-40 left-1/2 h-80 w-[60%] -translate-x-1/2 rounded-full bg-gradient-to-r from-electric-500/20 via-indigo-500/15 to-violet-500/20 blur-3xl" />
+      <div className="container-px relative">
+        {/* newsletter */}
+        <div className="card-glow mx-auto mb-16 flex max-w-4xl flex-col items-center gap-6 p-8 text-center sm:flex-row sm:justify-between sm:text-left">
+          <div>
+            <h3 className="font-display text-xl font-bold text-white">Stay ahead of the curve</h3>
+            <p className="mt-1 text-sm text-white/60">Insights on tech, AI, OTT and IP — no spam.</p>
           </div>
+          <form className="flex w-full max-w-sm gap-2" onSubmit={(e) => e.preventDefault()}>
+            <input type="email" placeholder="you@company.com" className="w-full rounded-full border border-white/10 bg-white/5 px-4 py-2.5 text-sm text-white outline-none focus:border-electric-400/60" />
+            <button className="btn-primary shrink-0 px-5 py-2.5">Subscribe <ArrowRight className="h-4 w-4" /></button>
+          </form>
         </div>
-      </section>
 
-      {/* Bottom Footer */}
-      <div className="border-t border-border">
-        <div className="container mx-auto px-6 py-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Logo & Copyright */}
-            <div className="flex items-center gap-6">
-              <Link to="/" className="flex items-center gap-2">
-                <img src={logo} alt="ContriveInsight" className="w-10 h-10 object-contain" />
-                <span className="text-xl font-bold text-foreground">
-                  Contrive<span className="text-primary">Insight</span>
-                </span>
-              </Link>
-              <span className="text-muted-foreground text-sm">
-                © 2025 ContriveInsight. All rights reserved.
-              </span>
-            </div>
-
-            {/* Links */}
-            <nav className="flex items-center gap-6 text-sm">
-              <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link to="/process" className="text-muted-foreground hover:text-primary transition-colors">
-                Process
-              </Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
-                Contact
-              </Link>
-            </nav>
-
-            {/* Social Links */}
-            <div className="flex items-center gap-3">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary transition-colors"
-              >
-                <Twitter className="w-4 h-4" />
-              </a>
+        <div className="grid gap-10 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div>
+            <Link to="/" className="flex items-center gap-2.5">
+              <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-electric-500 to-indigo-500 font-display text-sm font-bold text-white">C</span>
+              <span className="font-display text-lg font-bold text-white">Contrive<span className="gradient-text">Insight</span></span>
+            </Link>
+            <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/55">
+              Technology That Helps Businesses Grow. Engineering, AI, OTT and intellectual property services for ambitious teams.
+            </p>
+            <div className="mt-5 flex gap-3">
+              {[Linkedin, Twitter, Github].map((I, i) => (
+                <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/5 text-white/70 transition hover:bg-white/10 hover:text-white">
+                  <I className="h-4 w-4" />
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="mt-6 pt-4 border-t border-border/60 text-center text-sm text-muted-foreground">
-            Powered by{" "}
-            <a
-              href="https://www.techhim.online/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium text-foreground hover:text-primary transition-colors"
-            >
-              TechHim Solutions
-            </a>
-          </div>
+          <FooterCol title="Services" links={SERVICES.map((s) => ({ label: s.name, to: `/services/${s.slug}` }))} />
+          <FooterCol title="Company" links={[
+            { label: "About", to: "/#about" },
+            { label: "Industries", to: "/#industries" },
+            { label: "Process", to: "/#process" },
+            { label: "Contact", to: "/contact" },
+          ]} />
+          <FooterCol title="Contact" links={[
+            { label: "+91 70151 89070", to: "tel:+917015189070" },
+            { label: "info@contriveinsight.com", to: "mailto:info@contriveinsight.com" },
+            { label: "Delhi, India", to: "/contact" },
+          ]} />
+        </div>
+
+        <div className="mt-14 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 text-sm text-white/40 sm:flex-row">
+          <span>© {new Date().getFullYear()} ContriveInsight. All rights reserved.</span>
+          <span>Designed & engineered with precision.</span>
         </div>
       </div>
     </footer>
   );
-};
+}
 
-export default Footer;
+function FooterCol({ title, links }: { title: string; links: { label: string; to: string }[] }) {
+  return (
+    <div>
+      <h4 className="font-display text-sm font-semibold uppercase tracking-wider text-white/80">{title}</h4>
+      <ul className="mt-4 space-y-2.5">
+        {links.map((l) => (
+          <li key={l.label}>
+            <Link to={l.to} className="text-sm text-white/55 transition hover:text-white">{l.label}</Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
