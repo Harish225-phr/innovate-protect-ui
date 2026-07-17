@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Send, CheckCircle2 } from "lucide-react";
+import { Phone, Mail, MapPin, Send, CircleCheck as CheckCircle2 } from "lucide-react";
 import { CONTACT_INFO } from "../data/content";
 import { SectionHeading } from "./SectionHeading";
 
